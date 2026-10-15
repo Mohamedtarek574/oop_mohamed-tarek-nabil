@@ -1,0 +1,78 @@
+q6
+package javaapplication169;
+
+import java.util.Scanner;
+
+
+public class JavaApplication169 {
+
+    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int num = input.nextInt();
+        int max =0;
+
+        while (num != 0) {
+            if (num > max) {
+                max = num;
+            }
+            num = input.nextInt();
+        }
+
+        System.out.println(max);
+    }
+}
+
+q7
+package javaapplication169;
+
+import java.util.Scanner;
+
+
+public class JavaApplication169 {
+
+    
+    public static void main(String[] args) {
+  
+        Scanner input = new Scanner(System.in);
+System.out.print("enter number ");
+        int n = input.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+
+      q8
+
+
+      
+package javaapplication169;
+
+import java.util.Scanner;
+
+
+public class JavaApplication169 {
+
+    
+    public static void main(String[] args) {
+  
+        Scanner input = new Scanner(System.in);
+System.out.println("enter number");
+        int num = input.nextInt();
+        int reverse = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+            reverse = reverse * 10 + digit;
+            num = num / 10;
+        }
+
+        System.out.println(reverse);
+    }
+}

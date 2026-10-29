@@ -1,0 +1,107 @@
+package javaapplication88;
+
+import java.util.Scanner;
+
+
+
+
+/*public class SecretNumberGame {
+
+    public static int generateSecret() {
+        return (int) (Math.random() * 50) + 1;
+    }
+
+    public static String checkGuess(int guess, int secret) {
+        if (guess == secret) {
+            return "Correct";
+        } else if (guess < secret) {
+            return "Higher";
+        } else {
+            return "Lower";
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int secret = generateSecret();
+        int[] guesses = new int[5];
+        int attempts = 0;
+        boolean correct = false;
+
+        while (attempts < 5 && !correct) {
+            System.out.print("Enter your guess: ");
+            guesses[attempts] = input.nextInt();
+            attempts++;
+
+            String result = checkGuess(guesses[attempts - 1], secret);
+
+            if (result.equals("Correct")) {
+                System.out.println("Correct in " + attempts + " attempts");
+                correct = true;
+            } else {
+                System.out.println(result);
+            }
+        }
+
+        if (!correct) {
+            System.out.println("All attempts failed!");
+            System.out.println("Secret Number: " + secret);
+        }
+
+        input.close();
+    }
+}*/
+
+
+public class StudentGrades {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String[][] students = new String[3][2];
+
+        System.out.println("Enter name and grade for 3 students:");
+
+        for (int i = 0; i < 3; i++) {
+            students[i][0] = input.next();
+            students[i][1] = input.next();
+        }
+
+        System.out.println("\nStudent Information:");
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println(
+                students[i][0].concat(": ").concat(students[i][1])
+            );
+        }
+
+        int countA = 0;
+
+        for (int i = 0; i < 3; i++) {
+            if (students[i][1].equalsIgnoreCase("A")) {
+                countA++;
+            }
+        }
+
+        System.out.println("Students with grade A: " + countA);
+
+        System.out.print("Enter first letter: ");
+        String prefix = input.next();
+
+        int countNames = 0;
+
+        for (int i = 0; i < 3; i++) {
+            if (students[i][0].startsWith(prefix)) {
+                countNames++;
+            }
+        }
+
+        System.out.println(
+            "Names starting with " + prefix + ": " + countNames
+        );
+
+        input.close();
+    }
+}
+  
